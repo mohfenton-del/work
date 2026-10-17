@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محمد حاتم الشهراني | Sound Engineer Portfolio (2441068)</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Cairo', 'Inter', 'sans-serif'],
+            en: ['Inter', 'Cairo', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          colors: {
+            studio: {
+              950: '#040806',
+              900: '#07100b',
+              850: '#0b1911',
+              800: '#0f2418',
+              700: '#163826',
+              600: '#1f5136',
+              500: '#10b981',
+              400: '#34d399',
+              300: '#6ee7b7'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #040806;
+      color: #ecfdf5;
+      font-family: 'Cairo', 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .bg-grid-pattern {
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.14) 0%, transparent 35%),
+        radial-gradient(circle at 85% 75%, rgba(5, 150, 105, 0.12) 0%, transparent 40%),
+        linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+    }
+    .glass-card {
+      background: linear-gradient(145deg, rgba(11, 25, 17, 0.88), rgba(6, 14, 10, 0.94));
+      border: 1px solid rgba(16, 185, 129, 0.22);
+      box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(52, 211, 153, 0.12);
+      backdrop-filter: blur(12px);
+    }
+    .glass-card:hover {
+      border-color: rgba(52, 211, 153, 0.45);
+      box-shadow: 0 16px 40px -8px rgba(16, 185, 129, 0.18), inset 0 1px 0 0 rgba(52, 211, 153, 0.25);
+    }
+    .eq-bar {
+      animation: eqPulse 1.2s ease-in-out infinite alternate;
+      transform-origin: bottom;
+    }
+    @keyframes eqPulse {
+      0% { transform: scaleY(0.25); opacity: 0.6; }
+      50% { transform: scaleY(0.95); opacity: 1; }
+      100% { transform: scaleY(0.4); opacity: 0.75; }
+    }
+    .glow-badge {
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+    }
+    video {
+      background: #020503;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #040806; }
+    ::-webkit-scrollbar-thumb { background: #163826; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #10b981; }
+  </style>
+</head>
+<body class="bg-grid-pattern min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-black">
+
+  <!-- TOP STUDIO HEADER & NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-[#040806]/90 backdrop-blur-md border-b border-emerald-900/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+      <!-- Brand / Identity -->
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-900 flex items-center justify-center shadow-lg shadow-emerald-950 border border-emerald-400/40">
+          <!-- Soundwave Icon -->
+          <div class="flex items-end gap-0.5 h-5">
+            <span class="w-1 h-3 bg-black rounded-full eq-bar" style="animation-delay:0.1s"></span>
+            <span class="w-1 h-5 bg-black rounded-full eq-bar" style="animation-delay:0.3s"></span>
+            <span class="w-1 h-4 bg-black rounded-full eq-bar" style="animation-delay:0.2s"></span>
+            <span class="w-1 h-5 bg-black rounded-full eq-bar" style="animation-delay:0.4s"></span>
+            <span class="w-1 h-2.5 bg-black rounded-full eq-bar" style="animation-delay:0.15s"></span>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-base sm:text-lg text-white tracking-wide">محمد حاتم الشهراني</span>
+            <span class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-950/90 text-emerald-300 border border-emerald-700/50">ID: 2441068</span>
+          </div>
+          <p class="text-xs text-emerald-400/90 font-en">FENTON SOUNDS • Sound Operator &amp; Sound Mixer • الشعبة: 11-12</p>
+        </div>
+      </div>
+
+      <!-- Main Page Navigation Pills -->
+      <nav class="flex items-center gap-1.5 overflow-x-auto max-w-full py-1" aria-label="تنقل الصفحات">
+        <button type="button" data-nav-page="bio" class="nav-pill px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-emerald-500 text-black shadow-md">
+          1. السيرة الذاتية | Bio
+        </button>
+        <button type="button" data-nav-page="index" class="nav-pill px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/70 border border-emerald-800/50">
+          2. فهرس الأعمال | Index
+        </button>
+        <button type="button" data-nav-page="raheen" class="nav-pill px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/70 border border-emerald-800/50">
+          3. فلم رهين
+        </button>
+        <button type="button" data-nav-page="sukkar" class="nav-pill px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/70 border border-emerald-800/50">
+          4. شوية سكر
+        </button>
+        <button type="button" data-nav-page="lastnight" class="nav-pill px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/70 border border-emerald-800/50">
+          5. Last Night
+        </button>
+        <button type="button" data-nav-page="effat" class="nav-pill px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/70 border border-emerald-800/50">
+          6. عفت &amp; أنا وظلي
+        </button>
+        <button type="button" data-nav-page="podcasts" class="nav-pill px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/70 border border-emerald-800/50">
+          7. الوثائقي والبودكاست
+        </button>
+        <button type="button" data-nav-page="contact" class="nav-pill px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/70 border border-emerald-800/50">
+          8. التواصل | Contact
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-7xl w-full mx-auto px-4 sm:px-6 py-8 flex-1">
+
+    <!-- ==========================================
+         PAGE 1: BIO & INTRODUCTION (الصفحة الأولى التعريفية)
+         ========================================== -->
+    <section id="page-bio" class="portfolio-page space-y-8">
+      <!-- Hero Studio Banner -->
+      <div class="glass-card rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+        <div class="absolute -top-24 -left-24 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-emerald-700/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 relative z-10">
+          <div class="space-y-4 max-w-3xl">
+            <!-- Academic & Section Badges -->
+            <div class="flex flex-wrap items-center gap-2.5">
+              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 glow-badge">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                مهندس صوت | Sound Operator &amp; Sound Mixer
+              </span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-mono font-bold bg-black/80 text-emerald-400 border border-emerald-700/60">
+                رقم الشعبة: 11-12 | Section: 11-12
+              </span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-950/80 text-emerald-200 border border-emerald-800/60">
+                جامعة الملك عبدالعزيز (KAU)
+              </span>
+            </div>
+
+            <!-- Name & University ID directly underneath -->
+            <div class="space-y-1 pt-1">
+              <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+                محمد حاتم الشهراني
+              </h1>
+              <p class="text-lg sm:text-2xl font-en font-bold text-emerald-400">
+                Mohammed Hatem Al-Shahrani
+              </p>
+              <div class="inline-flex items-center gap-3 mt-2 px-4 py-2 rounded-xl bg-black/75 border border-emerald-500/40">
+                <span class="text-xs sm:text-sm text-emerald-300 font-semibold">الرقم الجامعي / University ID:</span>
+                <span class="text-lg sm:text-xl font-mono font-extrabold text-white tracking-wider">2441068</span>
+                <span class="text-emerald-600">|</span>
+                <span class="text-xs sm:text-sm text-emerald-300 font-semibold">الشعبة: <strong class="text-white">11-12</strong></span>
+              </div>
+            </div>
+
+            <!-- Quick Role Summary -->
+            <p class="text-emerald-100/90 text-sm sm:text-base leading-relaxed">
+              بكالوريوس إعلام – تخصص إنتاج مرئي ومسموع بجامعة الملك عبدالعزيز | متخصص في التسجيل الصوتي الميداني، المكساج، تنظيف ومعالجة الحوارات، وتصميم المؤثرات الصوتية السينمائية والإعلانية.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <button type="button" data-goto="index" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm sm:text-base transition-all shadow-lg shadow-emerald-900/40 flex items-center gap-2">
+                <span>تصفح فهرس الأعمال (9 أعمال)</span>
+                <span>←</span>
+              </button>
+              <button type="button" data-goto="raheen" class="px-5 py-3 rounded-xl bg-emerald-950/90 hover:bg-emerald-900 text-emerald-200 font-bold text-sm sm:text-base border border-emerald-600/50 transition-all">
+                البدء بأول عمل: فلم رهين
+              </button>
+              <button type="button" data-goto="contact" class="px-5 py-3 rounded-xl bg-black/70 hover:bg-emerald-950 text-emerald-300 font-semibold text-sm sm:text-base border border-emerald-800/60 transition-all">
+                معلومات التواصل
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive Studio Meter Widget -->
+          <div class="w-full lg:w-80 bg-black/80 rounded-2xl p-5 border border-emerald-800/60 space-y-4 shrink-0">
+            <div class="flex items-center justify-between border-b border-emerald-900/60 pb-2.5">
+              <span class="text-xs font-mono text-emerald-400 font-bold">STUDIO CONSOLE // CH 11-12</span>
+              <span id="audio-status-badge" class="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-700/40">READY</span>
+            </div>
+            <canvas id="wave-canvas" width="280" height="84" class="w-full h-20 rounded-lg bg-[#030705] border border-emerald-900/50"></canvas>
+            <div class="space-y-1.5">
+              <p class="text-xs text-emerald-300/90 font-semibold">جرب نغمة الاستوديو التفاعلية (Studio Tone Test):</p>
+              <div class="grid grid-cols-2 gap-2">
+                <button type="button" data-sound="cinema" class="sound-trigger px-2.5 py-2 rounded-lg bg-emerald-950/90 hover:bg-emerald-800/80 text-emerald-200 text-xs font-medium border border-emerald-700/40 transition-all">
+                  🎬 Cinema Sub-Bass
+                </button>
+                <button type="button" data-sound="clean" class="sound-trigger px-2.5 py-2 rounded-lg bg-emerald-950/90 hover:bg-emerald-800/80 text-emerald-200 text-xs font-medium border border-emerald-700/40 transition-all">
+                  🎙️ Dialogue Sync Beep
+                </button>
+                <button type="button" data-sound="sfx" class="sound-trigger px-2.5 py-2 rounded-lg bg-emerald-950/90 hover:bg-emerald-800/80 text-emerald-200 text-xs font-medium border border-emerald-700/40 transition-all">
+                  ⚡ Foley / SFX Sweep
+                </button>
+                <button type="button" data-sound="podcast" class="sound-trigger px-2.5 py-2 rounded-lg bg-emerald-950/90 hover:bg-emerald-800/80 text-emerald-200 text-xs font-medium border border-emerald-700/40 transition-all">
+                  🎧 Podcast Warm Chime
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bilingual CV / Bio Section (Arabic & English side-by-side) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Arabic Bio Card -->
+        <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-4">
+          <div class="flex items-center justify-between border-b border-emerald-900/60 pb-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+              <h2 class="text-xl sm:text-2xl font-extrabold text-white">نبذة تعريفية (السيرة الذاتية)</h2>
+            </div>
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-emerald-950 text-emerald-300 border border-emerald-700/50">العربية • AR</span>
+          </div>
+          <p class="text-emerald-50/95 leading-relaxed text-sm sm:text-base">
+            أنا <strong class="text-emerald-400">محمد حاتم الشهراني</strong>، مهندس صوت ومشغل وميكسر صوتي (<strong class="text-emerald-300">Sound Operator &amp; Sound Mixer</strong>)، طالب في <strong class="text-white">جامعة الملك عبدالعزيز</strong> بمرحلة البكالوريوس في قسم الإعلام – تخصص <strong class="text-emerald-300">إنتاج مرئي ومسموع</strong> (الرقم الجامعي: <span class="font-mono text-emerald-300">2441068</span> | الشعبة: <span class="font-mono text-emerald-300">11-12</span>).
+          </p>
+          <p class="text-emerald-100/85 leading-relaxed text-sm sm:text-base">
+            عملت في العديد من الأفلام الروائية والقصيرة، الوثائقيات، الإعلانات، وبرامج البودكاست بمختلف أنواعها. أمتلك خبرة عملية متعمقة في قطاعات الإنتاج الصوتي، بدءاً من التسجيل الصوتي الميداني في مواقع التصوير (Boom &amp; Field Recording)، مروراً بتنظيف ومعالجة الأصوات وعزل الضوضاء، وصولاً إلى تصميم المؤثرات الصوتية (SFX) والموسيقى التصويرية والمكساج النهائي، مع توظيف التفكير الإبداعي وإتقان جميع أسس الإنتاج الفني.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-black/60 border border-emerald-800/60 text-xs text-emerald-300">هندسة صوتية ومكساج</span>
+            <span class="px-3 py-1 rounded-lg bg-black/60 border border-emerald-800/60 text-xs text-emerald-300">مشغل صوت ميداني (Sound Operator)</span>
+            <span class="px-3 py-1 rounded-lg bg-black/60 border border-emerald-800/60 text-xs text-emerald-300">تنظيف ومعالجة الأصوات</span>
+            <span class="px-3 py-1 rounded-lg bg-black/60 border border-emerald-800/60 text-xs text-emerald-300">تصميم المؤثرات الصوتية والموسيقى</span>
+            <span class="px-3 py-1 rounded-lg bg-black/60 border border-emerald-800/60 text-xs text-emerald-300">التفكير الإبداعي وأسس الإنتاج</span>
+          </div>
+        </div>
+
+        <!-- English Bio Card -->
+        <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-4 font-en" dir="ltr">
+          <div class="flex items-center justify-between border-b border-emerald-900/60 pb-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+              <h2 class="text-xl sm:text-2xl font-extrabold text-white">Professional Bio &amp; Profile</h2>
+            </div>
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-emerald-950 text-emerald-300 border border-emerald-700/50">ENGLISH • EN</span>
+          </div>
+          <p class="text-emerald-50/95 leading-relaxed text-sm sm:text-base">
+            I am <strong class="text-emerald-400">Mohammed Hatem Al-Shahrani</strong>, a dedicated <strong class="text-emerald-300">Sound Engineer, Sound Operator, and Sound Mixer</strong> pursuing a Bachelor's degree in Media (<strong class="text-white">Audio-Visual Production</strong>) at <strong class="text-emerald-300">King Abdulaziz University</strong> (Student ID: <span class="font-mono text-emerald-300">2441068</span> | Section: <span class="font-mono text-emerald-300">11-12</span>).
+          </p>
+          <p class="text-emerald-100/85 leading-relaxed text-sm sm:text-base">
+            I have contributed to numerous narrative and short films, documentaries, commercials, and podcasts across diverse genres. My hands-on experience spans multiple sectors of audio production—including on-set field recording and boom operation, dialogue cleanup and spectral restoration, custom sound effects (SFX) design, musical scoring, and final mastering—combining creative problem-solving with solid production fundamentals.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-black/60 border border-emerald-800/60 text-xs text-emerald-300">Sound Operator &amp; Mixer</span>
+            <span class="px-3 py-1 rounded-lg bg-black/60 border border-emerald-800/60 text-xs text-emerald-300">Dialogue Cleanup &amp; Restoration</span>
+            <span class="px-3 py-1 rounded-lg bg-black/60 border border-emerald-800/60 text-xs text-emerald-300">SFX &amp; Cinematic Sound Design</span>
+            <span class="px-3 py-1 rounded-lg bg-black/60 border border-emerald-800/60 text-xs text-emerald-300">Podcast &amp; Broadcast Audio</span>
+            <span class="px-3 py-1 rounded-lg bg-black/60 border border-emerald-800/60 text-xs text-emerald-300">Creative Production Fundamentals</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Specialties Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="glass-card rounded-2xl p-4 text-center space-y-1">
+          <div class="text-2xl font-black text-emerald-400 font-mono">09+</div>
+          <div class="text-xs sm:text-sm font-bold text-white">أعمال سينمائية وإعلامية</div>
+          <div class="text-[11px] text-emerald-300/75 font-en">Films, Docs &amp; Podcasts</div>
+        </div>
+        <div class="glass-card rounded-2xl p-4 text-center space-y-1">
+          <div class="text-2xl font-black text-emerald-400 font-mono">DAW &amp; SFX</div>
+          <div class="text-xs sm:text-sm font-bold text-white">تنظيف ومؤثرات ومكساج</div>
+          <div class="text-[11px] text-emerald-300/75 font-en">Post-Production Audio</div>
+        </div>
+        <div class="glass-card rounded-2xl p-4 text-center space-y-1">
+          <div class="text-2xl font-black text-emerald-400 font-mono">ON-SET</div>
+          <div class="text-xs sm:text-sm font-bold text-white">تسجيل ميداني وبوم مايك</div>
+          <div class="text-[11px] text-emerald-300/75 font-en">Location Sound Operating</div>
+        </div>
+        <div class="glass-card rounded-2xl p-4 text-center space-y-1">
+          <div class="text-2xl font-black text-emerald-400 font-mono">KAU</div>
+          <div class="text-xs sm:text-sm font-bold text-white">إعلام - إنتاج مرئي ومسموع</div>
+          <div class="text-[11px] text-emerald-300/75 font-en">ID: 2441068 | Sec: 11-12</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PAGE 2: WORKS INDEX (الصفحة الثانية: فهرس جميع أعمالي)
+         ========================================== -->
+    <section id="page-index" class="portfolio-page hidden space-y-8">
+      <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-emerald-900/60 pb-5">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">PAGE 02 // PORTFOLIO DIRECTORY</span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mt-1">فهرس جميع أعمالي | Works Index</h2>
+            <p class="text-sm text-emerald-200/80 mt-1">اضغط على أي عمل لاستعراض الفيديوهات، صور الكواليس، التايم لاين الصوتي، وتفاصيل العمل بالعربي والإنجليزي.</p>
+          </div>
+          <!-- Category Filter Buttons -->
+          <div class="flex flex-wrap gap-2">
+            <button type="button" data-filter="all" class="index-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-500 text-black">
+              الكل (9)
+            </button>
+            <button type="button" data-filter="films" class="index-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-950 text-emerald-200 border border-emerald-800/60">
+              خانة الأفلام (5)
+            </button>
+            <button type="button" data-filter="podcasts" class="index-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-950 text-emerald-200 border border-emerald-800/60">
+              الوثائقيات والبودكاست (3)
+            </button>
+            <button type="button" data-filter="ads" class="index-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-950 text-emerald-200 border border-emerald-800/60">
+              الإعلانات (1)
+            </button>
+          </div>
+        </div>
+
+        <!-- Index Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- 1. فلم رهين -->
+          <div data-category="films" class="index-card glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">خانة الأفلام • Film 01</span>
+                <span class="text-xs font-mono text-emerald-400">3 فيديوهات + 3 صور</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-white">فلم رهين | Raheen Film</h3>
+              <p class="text-xs sm:text-sm text-emerald-100/80 leading-relaxed">
+                مهندس صوت: تنظيف ومعالجة الأصوات والحوارات وتصميم المؤثرات الصوتية (Audio Cleanup &amp; Sound Effects).
+              </p>
+            </div>
+            <button type="button" data-goto="raheen" class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-sm transition-all">
+              استعراض العمل ومرفقاته ←
+            </button>
+          </div>
+
+          <!-- 2. فلم قصير شوية سكر -->
+          <div data-category="films" class="index-card glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">خانة الأفلام • Short Film 02</span>
+                <span class="text-xs font-mono text-emerald-400">فيديوهان + تايم لاين</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-white">فلم قصير (شوية سكر) | A Little Sugar</h3>
+              <p class="text-xs sm:text-sm text-emerald-100/80 leading-relaxed">
+                هندسة صوتية متكاملة: تنظيف الأصوات، تصميم المؤثرات الصوتية، والموسيقى التصويرية (Cleanup, SFX &amp; Music).
+              </p>
+            </div>
+            <button type="button" data-goto="sukkar" class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-sm transition-all">
+              استعراض العمل ومرفقاته ←
+            </button>
+          </div>
+
+          <!-- 3. فلم Last Night -->
+          <div data-category="films" class="index-card glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">خانة الأفلام • Film 03</span>
+                <span class="text-xs font-mono text-emerald-400">فيديو كواليس + 4 صور</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-white">فلم Last Night</h3>
+              <p class="text-xs sm:text-sm text-emerald-100/80 leading-relaxed">
+                مهندس ومشغل صوت ميداني ومكساج (On-Set Sound Operator, Boom Operator &amp; Sound Mixer).
+              </p>
+            </div>
+            <button type="button" data-goto="lastnight" class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-sm transition-all">
+              استعراض العمل ومرفقاته ←
+            </button>
+          </div>
+
+          <!-- 4. فلم جامعة عفت & فلم أنا وظلي -->
+          <div data-category="films" class="index-card glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">خانة الأفلام • عمل مزدوج 04</span>
+                <span class="text-xs font-mono text-emerald-400">فلمين في صفحة واحدة</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-white">فلم جامعة عفت &amp; فلم أنا وظلي</h3>
+              <p class="text-xs sm:text-sm text-emerald-100/80 leading-relaxed">
+                تسجيل صوتي ميداني بالبوم مايك وهندسة ومكساج مباشر في موقع التصوير (Location Sound &amp; DAW Mixing).
+              </p>
+            </div>
+            <button type="button" data-goto="effat" class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-sm transition-all">
+              استعراض الفلمين والكواليس ←
+            </button>
+          </div>
+
+          <!-- 5. وثائقي الحجاز (فيلم هوية الحجاز) -->
+          <div data-category="podcasts" class="index-card glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">وثائقي • Documentary 05</span>
+                <span class="text-xs font-mono text-emerald-400">يوتيوب + صور</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-white">وثائقي الحجاز (فيلم هوية الحجاز)</h3>
+              <p class="text-xs sm:text-sm text-emerald-100/80 leading-relaxed">
+                هندسة صوتية، موسيقى تصويرية، ومؤثرات صوتية تبرز الهوية الحجازية مع رابط المشاهدة المباشر على يوتيوب.
+              </p>
+            </div>
+            <button type="button" data-goto="podcasts" class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-sm transition-all">
+              مشاهدة الوثائقي والمرفقات ←
+            </button>
+          </div>
+
+          <!-- 6. بودكاست خفيف -->
+          <div data-category="podcasts" class="index-card glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-teal-500/20 text-teal-300 border border-teal-500/40">بودكاست • Podcast 06</span>
+                <span class="text-xs font-mono text-emerald-400">فيديو + صور الاستوديو</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-white">بودكاست خفيف | Khafeef Podcast</h3>
+              <p class="text-xs sm:text-sm text-emerald-100/80 leading-relaxed">
+                إعداد المايكروفونات، تسجيل وموازنة الأصوات الحوارية، ومعالجة الصوت الإذاعي والمرئي للبودكاست.
+              </p>
+            </div>
+            <button type="button" data-goto="podcasts" class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-sm transition-all">
+              استعراض البودكاست ومرفقاته ←
+            </button>
+          </div>
+
+          <!-- 7. فلم قصير الشغف -->
+          <div data-category="films" class="index-card glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">خانة الأفلام • Short Film 07</span>
+                <span class="text-xs font-mono text-emerald-400">Sound Design</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-white">فلم قصير الشغف | Al-Shaghaf</h3>
+              <p class="text-xs sm:text-sm text-emerald-100/80 leading-relaxed">
+                هندسة صوتية ومكساج وتصميم بيئة صوتية درامية تعكس ثيمة الشغف السينمائي (Audio Mixing &amp; Ambience).
+              </p>
+            </div>
+            <button type="button" data-goto="podcasts" class="w-full py-2.5 rounded-xl bg-emerald-950 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/60 font-bold text-sm transition-all">
+              عرض التفاصيل في قسم الأعمال ←
+            </button>
+          </div>
+
+          <!-- 8. بودكاست قصة -->
+          <div data-category="podcasts" class="index-card glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-teal-500/20 text-teal-300 border border-teal-500/40">بودكاست • Podcast 08</span>
+                <span class="text-xs font-mono text-emerald-400">Voice &amp; Mastering</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-white">بودكاست قصة | Qissah Podcast</h3>
+              <p class="text-xs sm:text-sm text-emerald-100/80 leading-relaxed">
+                هندسة صوتية سردية، تنقية الحوارات، وضبط المستويات الديناميكية لبيئة السرد القصصي.
+              </p>
+            </div>
+            <button type="button" data-goto="podcasts" class="w-full py-2.5 rounded-xl bg-emerald-950 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/60 font-bold text-sm transition-all">
+              عرض التفاصيل في قسم الأعمال ←
+            </button>
+          </div>
+
+          <!-- 9. إعلان قهوة الصباح -->
+          <div data-category="ads" class="index-card glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-lime-500/20 text-lime-300 border border-lime-500/40">إعلانات • Commercial 09</span>
+                <span class="text-xs font-mono text-emerald-400">Foley &amp; Ad Mix</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-white">إعلان قهوة الصباح | Morning Coffee Ad</h3>
+              <p class="text-xs sm:text-sm text-emerald-100/80 leading-relaxed">
+                تصميم المؤثرات الحسية (Foley &amp; SFX) لصب القهوة والتحميص مع المكساج الإعلاني السريع.
+              </p>
+            </div>
+            <button type="button" data-goto="podcasts" class="w-full py-2.5 rounded-xl bg-emerald-950 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/60 font-bold text-sm transition-all">
+              عرض التفاصيل في قسم الأعمال ←
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PAGE 3: WORK 1 - FILM RAHEEN (العمل الأول: فلم رهين)
+         ========================================== -->
+    <section id="page-raheen" class="portfolio-page hidden space-y-8">
+      <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <!-- Header -->
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-emerald-900/60 pb-5">
+          <div>
+            <span class="text-xs font-mono text-emerald-400">PROJECT 01 // NARRATIVE FILM SOUND DESIGN</span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mt-1">العمل الأول: فلم (رهين) | Raheen Film</h2>
+          </div>
+          <span class="px-4 py-2 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs sm:text-sm font-bold">
+            مهندس الصوت: تنظيف الأصوات والمؤثرات الصوتية
+          </span>
+        </div>
+
+        <!-- Bilingual Role Explanation -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="p-5 rounded-2xl bg-black/60 border border-emerald-800/50 space-y-2">
+            <h3 class="text-sm font-bold text-emerald-400">طبيعة العمل في الفيلم (بالعربي):</h3>
+            <p class="text-sm sm:text-base text-emerald-50 leading-relaxed">
+              عملت في <strong class="text-white">فلم رهين</strong> كـ <strong class="text-emerald-300">مهندس صوت (Sound Engineer)</strong>، وتوليت مهمة تنظيف الأصوات الحوارية من الضوضاء المحيطة، معالجة الصدى، وتصميم ودمج المؤثرات الصوتية (SFX) والمحيط الصوتي لإبراز التوتر الدرامي في المشاهد.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-black/60 border border-emerald-800/50 space-y-2 font-en" dir="ltr">
+            <h3 class="text-sm font-bold text-emerald-400">Role &amp; Audio Contribution (English):</h3>
+            <p class="text-sm sm:text-base text-emerald-50 leading-relaxed">
+              Served as the <strong class="text-emerald-300">Sound Engineer</strong> on <strong class="text-white">Raheen</strong>, handling dialogue cleanup, noise reduction, reverb control (ValhallaVintageVerb), and crafting custom sound effects (SFX) and dramatic audio layers to heighten cinematic tension.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ordered Media Grid as requested: 1. Video Before -> 2. DAW Timeline Image -> 3. After Videos & Photos -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-emerald-300 flex items-center gap-2">
+            <span>🎬</span>
+            <span>مراحل العمل والمرفقات (مرتبة: فيديو Before أولاً ثم صورة التايم لاين ثانياً ثم المشاهد النهائية والكواليس):</span>
+          </h3>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- ITEM 1: FIRST VIDEO (BEFORE) -->
+            <div class="rounded-2xl bg-black/80 border-2 border-emerald-500/60 p-4 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-lg bg-emerald-500 text-black font-extrabold text-xs">1. الفيديو الأول (Before - قبل وبعد المعالجة)</span>
+                <span class="text-xs font-mono text-emerald-400">Video 01 • Before</span>
+              </div>
+              <video controls playsinline preload="metadata" class="w-full rounded-xl max-h-80 object-contain border border-emerald-900/60" src="assets/copy_17638ADE-B4AE-4B09-8C36-395E94B1CCD0_2.mp4"></video>
+              <p class="text-xs text-emerald-200/80">مقطع يوضح مقارنة الصوت الأصلي (Before) ومراحل تنظيف الحوار في فلم رهين.</p>
+            </div>
+
+            <!-- ITEM 2: SECOND ITEM (DAW TIMELINE SCREENSHOT RIGHT AFTER BEFORE VIDEO) -->
+            <div class="rounded-2xl bg-black/80 border-2 border-emerald-500/60 p-4 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-lg bg-emerald-500 text-black font-extrabold text-xs">2. الصورة الثانية (تايم لاين الهندسة الصوتية والمكساج)</span>
+                <span class="text-xs font-mono text-emerald-400">DAW Arrangement • Track Mix</span>
+              </div>
+              <img src="assets/raheen_daw.jpg" alt="تايم لاين الهندسة الصوتية لفلم رهين" class="lightbox-trigger w-full h-64 object-cover rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+              <p class="text-xs text-emerald-200/80">صورة من مشروع الهندسة الصوتية توضح تراكات الصوت المنظف (ALL MAIN CLEAN) والمؤثرات والموسيقى (SFX &amp; Music).</p>
+            </div>
+
+            <!-- ITEM 3: VIDEO 2 (SCENE AFTER SFX 1) -->
+            <div class="rounded-2xl bg-black/75 border border-emerald-800/60 p-4 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-700/50 font-bold text-xs">3. مشهد سنمائي بعد هندسة الصوت والمؤثرات (1)</span>
+                <span class="text-xs font-mono text-emerald-400">Final Mix Clip A</span>
+              </div>
+              <video controls playsinline preload="metadata" class="w-full rounded-xl max-h-72 object-contain border border-emerald-900/60" src="assets/copy_17638ADE-B4AE-4B09-8C36-395E94B1CCD0.mp4"></video>
+              <p class="text-xs text-emerald-200/80">تطبيق المؤثرات الصوتية وتنظيف الصوت في المشهد الدرامي لفلم رهين.</p>
+            </div>
+
+            <!-- ITEM 4: VIDEO 3 (SCENE AFTER SFX 2) -->
+            <div class="rounded-2xl bg-black/75 border border-emerald-800/60 p-4 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-700/50 font-bold text-xs">4. مشهد سنمائي بعد هندسة الصوت والمؤثرات (2)</span>
+                <span class="text-xs font-mono text-emerald-400">Final Mix Clip B</span>
+              </div>
+              <video controls playsinline preload="metadata" class="w-full rounded-xl max-h-72 object-contain border border-emerald-900/60" src="assets/copy_17638ADE-B4AE-4B09-8C36-395E94B1CCD0_3.mp4"></video>
+              <p class="text-xs text-emerald-200/80">معالجة الأجواء الصوتية والمؤثرات الدقيقة داخل مشهد المكتب في فلم رهين.</p>
+            </div>
+
+            <!-- ITEM 5: BEHIND THE SCENES CLAPPERBOARD PHOTO -->
+            <div class="rounded-2xl bg-black/75 border border-emerald-800/60 p-4 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-700/50 font-bold text-xs">5. كواليس التصوير والكلاكيت (On-Set Production)</span>
+                <span class="text-xs font-mono text-emerald-400">BTS Photo</span>
+              </div>
+              <img src="assets/raheen_cam.jpg" alt="كواليس تصوير فلم رهين" class="lightbox-trigger w-full h-64 object-cover rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+              <p class="text-xs text-emerald-200/80">من موقع تصوير فلم رهين ومزامنة الكلاكيت مع التسجيل الصوتي.</p>
+            </div>
+
+            <!-- ITEM 6: CREDITS PHOTO -->
+            <div class="rounded-2xl bg-black/75 border border-emerald-800/60 p-4 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-700/50 font-bold text-xs">6. تتر الفيلم الرسمي (مهندس الصوت: محمد حاتم)</span>
+                <span class="text-xs font-mono text-emerald-400">Film Credits</span>
+              </div>
+              <img src="assets/raheen_credits.jpg" alt="تتر فلم رهين - مهندس الصوت محمد حاتم" class="lightbox-trigger w-full h-64 object-contain bg-black rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+              <p class="text-xs text-emerald-200/80">شاشة التتر النهائية لفلم رهين وتوثيق اسم محمد حاتم كمهندس صوت للعمل.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PAGE 4: WORK 2 - SHORT FILM SHWAYT SUKKAR (شوية سكر)
+         ========================================== -->
+    <section id="page-sukkar" class="portfolio-page hidden space-y-8">
+      <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-emerald-900/60 pb-5">
+          <div>
+            <span class="text-xs font-mono text-emerald-400">PROJECT 02 // SHORT FILM AUDIO POST-PRODUCTION</span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mt-1">العمل الثاني: الفلم القصير (شوية سكر) | A Little Sugar</h2>
+          </div>
+          <span class="px-4 py-2 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs sm:text-sm font-bold">
+            هندسة صوتية: تنظيف ومؤثرات وموسيقى
+          </span>
+        </div>
+
+        <!-- Bilingual Description -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="p-5 rounded-2xl bg-black/60 border border-emerald-800/50 space-y-2">
+            <h3 class="text-sm font-bold text-emerald-400">تفاصيل عملي في الفيلم (بالعربي):</h3>
+            <p class="text-sm sm:text-base text-emerald-50 leading-relaxed">
+              توليت في الفلم القصير <strong class="text-white">(شوية سكر)</strong> مهام <strong class="text-emerald-300">الهندسة الصوتية الكاملة</strong>، وشمل ذلك تنظيف وتنقية الحوارات، تصميم المؤثرات الصوتية الواقعية، ودمج الموسيقى التصويرية وموازنتها مع الأداء التمثيلي.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-black/60 border border-emerald-800/50 space-y-2 font-en" dir="ltr">
+            <h3 class="text-sm font-bold text-emerald-400">Role &amp; Audio Contribution (English):</h3>
+            <p class="text-sm sm:text-base text-emerald-50 leading-relaxed">
+              Led the complete <strong class="text-emerald-300">Sound Engineering &amp; Post-Production</strong> for the short film <strong class="text-white">A Little Sugar (Shwayt Sukkar)</strong>, encompassing dialogue cleanup, custom sound effects (SFX), and cinematic musical score mixing.
+            </p>
+          </div>
+        </div>
+
+        <!-- Media Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500 text-black font-extrabold text-xs">1. المقطع الأول من فلم (شوية سكر)</span>
+              <span class="text-xs font-mono text-emerald-400">Scene Clip 01</span>
+            </div>
+            <video controls playsinline preload="metadata" class="w-full rounded-xl max-h-80 object-contain border border-emerald-900/60" src="assets/a3a08ec1-50f7-4934-9de7-ce9b3cf77a56.mp4"></video>
+            <p class="text-xs text-emerald-200/80">استعراض نقاء الصوت الحواري والموسيقى التصويرية في المشهد الأول.</p>
+          </div>
+
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500 text-black font-extrabold text-xs">2. المقطع الثاني من فلم (شوية سكر)</span>
+              <span class="text-xs font-mono text-emerald-400">Scene Clip 02</span>
+            </div>
+            <video controls playsinline preload="metadata" class="w-full rounded-xl max-h-80 object-contain border border-emerald-900/60" src="assets/a3a08ec1-50f7-4934-9de7-ce9b3cf77a56_2.mp4"></video>
+            <p class="text-xs text-emerald-200/80">توازن الحوار مع المؤثرات الصوتية للمكان وحركة الممثلين داخل المشهد.</p>
+          </div>
+
+          <div class="lg:col-span-2 rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-700/50 font-bold text-xs">3. صورة التايم لاين والمكساج الصوتي لفلم (شوية سكر)</span>
+              <span class="text-xs font-mono text-emerald-400">DAW Timeline • Music &amp; Dialogue Mix</span>
+            </div>
+            <img src="assets/sukkar_daw.jpg" alt="تايم لاين فلم شوية سكر" class="lightbox-trigger w-full max-h-96 object-cover rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+            <p class="text-xs text-emerald-200/80">لقطة من برنامج الهندسة الصوتية توضح ترتيب تراكات الحوار والمؤثرات والموسيقى التصويرية (Cinematic Outro &amp; Dialogue Tracks).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PAGE 5: WORK 3 - FILM LAST NIGHT (فلم Last Night)
+         ========================================== -->
+    <section id="page-lastnight" class="portfolio-page hidden space-y-8">
+      <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-emerald-900/60 pb-5">
+          <div>
+            <span class="text-xs font-mono text-emerald-400">PROJECT 03 // LOCATION SOUND &amp; FIELD MIXING</span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mt-1">العمل الثالث: فلم (Last Night)</h2>
+          </div>
+          <span class="px-4 py-2 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs sm:text-sm font-bold">
+            مهندس ومشغل صوت ميداني (Sound Operator &amp; Mixer)
+          </span>
+        </div>
+
+        <!-- Bilingual Description -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="p-5 rounded-2xl bg-black/60 border border-emerald-800/50 space-y-2">
+            <h3 class="text-sm font-bold text-emerald-400">طبيعة العمل في الفيلم (بالعربي):</h3>
+            <p class="text-sm sm:text-base text-emerald-50 leading-relaxed">
+              شاركت في فلم <strong class="text-white">Last Night</strong> كـ <strong class="text-emerald-300">مهندس ومشغل صوت ميداني (Sound Operator &amp; Sound Mixer)</strong>، حيث قمت بإدارة التسجيل الصوتي في موقع التصوير باستخدام ميكروفونات الـ Boom الموجهة مع عوازل الرياح (Blimp/Deadcat) وأجهزة التسجيل الميداني لضمان التقاط الحوارات الدرامية بأعلى نقاء.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-black/60 border border-emerald-800/50 space-y-2 font-en" dir="ltr">
+            <h3 class="text-sm font-bold text-emerald-400">Role &amp; Audio Contribution (English):</h3>
+            <p class="text-sm sm:text-base text-emerald-50 leading-relaxed">
+              Worked as the on-set <strong class="text-emerald-300">Sound Operator &amp; Field Sound Mixer</strong> for <strong class="text-white">Last Night</strong>, managing directional shotgun/boom microphones with wind protection and multi-track field recorders during intense dramatic scenes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Media Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500 text-black font-extrabold text-xs">1. كواليس التسجيل الصوتي الميداني (المعدات والمايكروفون)</span>
+              <span class="text-xs font-mono text-emerald-400">On-Set Sound Gear</span>
+            </div>
+            <img src="assets/lastnight_mic.jpg" alt="محمد حاتم في كواليس فلم Last Night" class="lightbox-trigger w-full h-80 object-cover rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+            <p class="text-xs text-emerald-200/80">أثناء متابعة التسجيل الصوتي الميداني بالمايكروفون الاحترافي وجهاز التسجيل في موقع تصوير Last Night.</p>
+          </div>
+
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500 text-black font-extrabold text-xs">2. فيديو من كواليس تصوير فلم Last Night</span>
+              <span class="text-xs font-mono text-emerald-400">BTS Video Clip</span>
+            </div>
+            <video controls playsinline preload="metadata" class="w-full rounded-xl h-80 object-contain border border-emerald-900/60" src="assets/IMG_8378.mp4"></video>
+            <p class="text-xs text-emerald-200/80">مقطع فيديو يوثق أجواء التصوير والحركة الكاميرتية والصوتية في كواليس Last Night.</p>
+          </div>
+
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-700/50 font-bold text-xs">3. بطاقة وبوستر فلم Last Night</span>
+              <span class="text-xs font-mono text-emerald-400">Film Poster</span>
+            </div>
+            <img src="assets/lastnight_poster.jpg" alt="بوستر فلم Last Night" class="lightbox-trigger w-full h-72 object-contain bg-black rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+          </div>
+
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-700/50 font-bold text-xs">4. لقطة من كواليس موقع التصوير</span>
+              <span class="text-xs font-mono text-emerald-400">Location Set</span>
+            </div>
+            <img src="assets/lastnight_bts1.jpg" alt="موقع تصوير فلم Last Night" class="lightbox-trigger w-full h-72 object-cover rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PAGE 6: WORK 4 - COMBINED PAGE: EFFAT FILM & ANA WA DHILLI (فلم عفت وفلم أنا وظلي)
+         ========================================== -->
+    <section id="page-effat" class="portfolio-page hidden space-y-8">
+      <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-emerald-900/60 pb-5">
+          <div>
+            <span class="text-xs font-mono text-emerald-400">PROJECT 04 // DUAL FILM SHOWCASE (ON ONE PAGE)</span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mt-1">العمل الرابع: فلم (جامعة عفت) &amp; فلم (أنا وظلي)</h2>
+            <p class="text-xs sm:text-sm text-emerald-300 mt-1">صفحة مزدوجة تجمع العملين معاً كما طلبت مع كواليس التسجيل الميداني والمكساج</p>
+          </div>
+          <span class="px-4 py-2 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs sm:text-sm font-bold">
+            فلمين في نفس الصفحة • Sound Operator &amp; Mixer
+          </span>
+        </div>
+
+        <!-- Dual Film Cards (Arabic & English) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Film A: Effat -->
+          <div class="p-6 rounded-2xl bg-black/70 border border-emerald-600/50 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-md bg-emerald-500/20 text-emerald-300 text-xs font-bold">الفيلم الأول في الصفحة</span>
+              <span class="text-xs font-mono text-emerald-400">Effat University Film</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-white">فلم جامعة عفت | Effat Film</h3>
+            <p class="text-sm text-emerald-100/90 leading-relaxed">
+              العمل كمهندس ومشغل صوت ميداني (Boom Operator &amp; Sound Mixer) داخل مواقع التصوير الداخلي، مع ضبط زوايا الالتقاط الصوتي وتفادي انعكاسات الصوت في الغرف الواسعة.
+            </p>
+            <p class="text-xs sm:text-sm text-emerald-300/80 font-en leading-relaxed" dir="ltr">
+              <strong>EN:</strong> On-set Sound Operator &amp; Boom Specialist on the Effat Film production, capturing clean dialogue across complex indoor hospital and studio sets.
+            </p>
+          </div>
+
+          <!-- Film B: Ana Wa Dhilli -->
+          <div class="p-6 rounded-2xl bg-black/70 border border-emerald-600/50 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-md bg-emerald-500/20 text-emerald-300 text-xs font-bold">الفيلم الثاني في الصفحة</span>
+              <span class="text-xs font-mono text-emerald-400">Me &amp; My Shadow</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-white">فلم أنا وظلي | Me and My Shadow</h3>
+            <p class="text-sm text-emerald-100/90 leading-relaxed">
+              تولي الهندسة الصوتية، التسجيل الميداني، والمراجعة الفورية للتراكات الصوتية والمؤثرات عبر محطة العمل الصوتية (DAW) مباشرة في موقع التصوير.
+            </p>
+            <p class="text-xs sm:text-sm text-emerald-300/80 font-en leading-relaxed" dir="ltr">
+              <strong>EN:</strong> Sound Engineer &amp; Mixer for "Me and My Shadow", combining field recording with live on-set DAW session monitoring and atmospheric sound design.
+            </p>
+          </div>
+        </div>
+
+        <!-- Behind the scenes showcase for Effat & Ana Wa Dhilli -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500 text-black font-extrabold text-xs">1. كواليس التسجيل بالبوم مايك في موقع التصوير</span>
+              <span class="text-xs font-mono text-emerald-400">On-Set Boom Operating</span>
+            </div>
+            <img src="assets/effat_boom.jpg" alt="كواليس فلم عفت وفلم أنا وظلي" class="lightbox-trigger w-full h-80 object-cover rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+            <p class="text-xs text-emerald-200/80">أثناء حمل البوم مايك والعمل وسط طاقم التصوير والإضاءة في موقع تصوير المشهد.</p>
+          </div>
+
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-700/50 font-bold text-xs">2. التجهيزات الصوتية والمكساج الميداني للفيلمين</span>
+                <span class="text-xs font-mono text-emerald-400">Field DAW &amp; Studio Setup</span>
+              </div>
+              <img src="assets/raheen_daw.jpg" alt="المكساج الصوتي الميداني" class="lightbox-trigger w-full h-56 object-cover rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+              <p class="text-xs text-emerald-200/80">متابعة التايم لاين الصوتي وموازنة التراكات مباشرة أثناء وبعد تصوير مشاهد فلم عفت وفلم أنا وظلي.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-emerald-950/50 border border-emerald-800/50 text-xs text-emerald-200 flex items-center justify-between">
+              <span>تقدر كمان تضيف أي صور إضافية من جهازك مباشرة لقسم الفيلمين:</span>
+              <label class="px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-bold cursor-pointer transition-all">
+                + إرفاق صورة/فيديو
+                <input type="file" accept="image/*,video/*" data-target-gallery="effat-custom-gallery" class="custom-media-input hidden" multiple />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div id="effat-custom-gallery" class="grid grid-cols-1 sm:grid-cols-2 gap-4 empty:hidden"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PAGE 7: DOCUMENTARY, PODCASTS & OTHER WORKS (وثائقي الحجاز والبودكاست وباقي الأعمال)
+         ========================================== -->
+    <section id="page-podcasts" class="portfolio-page hidden space-y-8">
+      <!-- Work 5: Hijaz Documentary -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-emerald-900/60 pb-5">
+          <div>
+            <span class="text-xs font-mono text-amber-400">PROJECT 05 // DOCUMENTARY SOUND &amp; MUSICAL SCORE</span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mt-1">العمل الخامس: وثائقي الحجاز (فيلم هوية الحجاز)</h2>
+          </div>
+          <a href="https://youtu.be/di_1a3CG70E?si=aHLCIRzuFeY2UHsT" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-extrabold text-xs sm:text-sm transition-all shadow-lg flex items-center gap-2">
+            <span>▶ مشاهدة الوثائقي على YouTube</span>
+            <span>↗</span>
+          </a>
+        </div>
+
+        <!-- Bilingual Description -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="p-5 rounded-2xl bg-black/60 border border-emerald-800/50 space-y-2">
+            <h3 class="text-sm font-bold text-emerald-400">طبيعة عملي في الوثائقي (بالعربي):</h3>
+            <p class="text-sm sm:text-base text-emerald-50 leading-relaxed">
+              عملت في <strong class="text-white">وثائقي الحجاز (فيلم هوية الحجاز)</strong> على <strong class="text-emerald-300">الهندسة الصوتية، الموسيقى التصويرية، والمؤثرات الصوتية</strong>، بحيث تتناغم الهوية الصوتية والمقامات الموسيقية مع عراقة الموروث الحجازي والسرد الوثائقي.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-black/60 border border-emerald-800/50 space-y-2 font-en" dir="ltr">
+            <h3 class="text-sm font-bold text-emerald-400">Role &amp; Audio Contribution (English):</h3>
+            <p class="text-sm sm:text-base text-emerald-50 leading-relaxed">
+              Handled <strong class="text-emerald-300">Sound Engineering, Musical Scoring, and Sound Effects (SFX)</strong> for the <strong class="text-white">Al-Hijaz Identity Documentary</strong>, blending authentic cultural acoustics with crisp documentary narration.
+            </p>
+          </div>
+        </div>
+
+        <!-- YouTube Embed + Banner Card -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500 text-black font-extrabold text-xs">مشغل الفيديو المباشر لوثائقي الحجاز</span>
+              <span class="text-xs font-mono text-emerald-400">YouTube Embed</span>
+            </div>
+            <div class="aspect-video w-full rounded-xl overflow-hidden border border-emerald-900/60 bg-black">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/di_1a3CG70E" title="وثائقي الحجاز - فيلم هوية الحجاز" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <span class="text-xs text-emerald-200/80">رابط المشاهدة المباشر للجمهور:</span>
+              <a href="https://youtu.be/di_1a3CG70E?si=aHLCIRzuFeY2UHsT" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-emerald-400 underline hover:text-emerald-300">
+                https://youtu.be/di_1a3CG70E
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-700/50 font-bold text-xs">بطاقة وغلاف وثائقي هوية الحجاز</span>
+              <span class="text-xs font-mono text-emerald-400">Documentary Visual</span>
+            </div>
+            <img src="assets/hijaz_banner.jpg" alt="وثائقي هوية الحجاز" class="lightbox-trigger w-full h-64 object-cover rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+            <p class="text-xs text-emerald-200/80">فيلم هوية الحجاز – هندسة صوتية وموسيقى ومؤثرات: محمد حاتم الشهراني.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work 6: Khafeef Podcast -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-emerald-900/60 pb-5">
+          <div>
+            <span class="text-xs font-mono text-teal-400">PROJECT 06 // PODCAST PRODUCTION &amp; AUDIO MIXING</span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mt-1">العمل السادس: بودكاست خفيف | Khafeef Podcast</h2>
+          </div>
+          <span class="px-4 py-2 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs sm:text-sm font-bold">
+            هندسة صوتية وتسجيل ومكساج بودكاست
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="p-5 rounded-2xl bg-black/60 border border-emerald-800/50 space-y-2">
+            <h3 class="text-sm font-bold text-emerald-400">طبيعة العمل في البودكاست (بالعربي):</h3>
+            <p class="text-sm sm:text-base text-emerald-50 leading-relaxed">
+              توليت في <strong class="text-white">بودكاست خفيف</strong> توزيع وضبط المايكروفونات اللاسلكية لضيوف الحلقات، مراقبة مستويات الصوت أثناء التصوير، ومعالجة وموازنة الترددات الصوتية ليخرج الحوار واضحاً ومريحاً للمستمعين.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-black/60 border border-emerald-800/50 space-y-2 font-en" dir="ltr">
+            <h3 class="text-sm font-bold text-emerald-400">Role &amp; Audio Contribution (English):</h3>
+            <p class="text-sm sm:text-base text-emerald-50 leading-relaxed">
+              Engineered the studio audio for <strong class="text-white">Khafeef Podcast</strong>, including lavalier microphone placement, live gain staging, vocal EQ warmth, and broadcast-standard loudness mastering.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <span class="px-3 py-1 rounded-lg bg-emerald-500 text-black font-extrabold text-xs inline-block">1. مقطع فيديو من بودكاست خفيف</span>
+            <video controls playsinline preload="metadata" class="w-full rounded-xl h-72 object-contain border border-emerald-900/60" src="assets/khafeef_podcast.mp4"></video>
+          </div>
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <span class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-700/50 font-bold text-xs inline-block">2. لقطة استوديو بودكاست خفيف (1)</span>
+            <img src="assets/khafeef_1.jpg" alt="بودكاست خفيف لقطة 1" class="lightbox-trigger w-full h-72 object-cover rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+          </div>
+          <div class="rounded-2xl bg-black/80 border border-emerald-700/60 p-4 space-y-3">
+            <span class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-700/50 font-bold text-xs inline-block">3. لقطة استوديو بودكاست خفيف (2)</span>
+            <img src="assets/khafeef_2.jpg" alt="بودكاست خفيف لقطة 2" class="lightbox-trigger w-full h-72 object-cover rounded-xl border border-emerald-800/60 cursor-pointer hover:opacity-90 transition-opacity" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Remaining Works in Index: الشغف، بودكاست قصة، إعلان قهوة الصباح -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-emerald-900/60 pb-4">
+          <div>
+            <span class="text-xs font-mono text-emerald-400">PROJECTS 07 - 09 // ADDITIONAL AUDIO PRODUCTIONS</span>
+            <h3 class="text-xl sm:text-2xl font-black text-white mt-1">أعمال إضافية مدرجة في الفهرس (أفلام، بودكاست، وإعلانات)</h3>
+          </div>
+          <label class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs sm:text-sm cursor-pointer transition-all">
+            + إرفاق ملفات إضافية من جهازك
+            <input type="file" accept="image/*,video/*" data-target-gallery="extra-custom-gallery" class="custom-media-input hidden" multiple />
+          </label>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="p-5 rounded-2xl bg-black/70 border border-emerald-800/60 space-y-2">
+            <span class="text-xs font-mono text-emerald-400">SHORT FILM // 07</span>
+            <h4 class="text-lg font-extrabold text-white">فلم قصير (الشغف) | Al-Shaghaf</h4>
+            <p class="text-xs sm:text-sm text-emerald-100/85">هندسة صوتية، معالجة الحوار، وتصميم المؤثرات الدرامية والموسيقى.</p>
+            <p class="text-xs text-emerald-300/75 font-en" dir="ltr">Sound Engineering, Dialogue Editing &amp; Dramatic SFX Mix.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-black/70 border border-emerald-800/60 space-y-2">
+            <span class="text-xs font-mono text-emerald-400">PODCAST // 08</span>
+            <h4 class="text-lg font-extrabold text-white">بودكاست (قصة) | Qissah Podcast</h4>
+            <p class="text-xs sm:text-sm text-emerald-100/85">تسجيل وهندسة صوتية سردية وتنقية الصوت البشري مع الماسترينغ الإذاعي.</p>
+            <p class="text-xs text-emerald-300/75 font-en" dir="ltr">Narrative Podcast Recording, Vocal Cleanup &amp; Mastering.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-black/70 border border-emerald-800/60 space-y-2">
+            <span class="text-xs font-mono text-emerald-400">COMMERCIAL // 09</span>
+            <h4 class="text-lg font-extrabold text-white">إعلان (قهوة الصباح) | Morning Coffee Ad</h4>
+            <p class="text-xs sm:text-sm text-emerald-100/85">تصميم المؤثرات الحسية (Foley &amp; SFX) لتحضير القهوة والمكساج الإعلاني.</p>
+            <p class="text-xs text-emerald-300/75 font-en" dir="ltr">Commercial Sound Design, Acoustic Foley &amp; Broadcast Mix.</p>
+          </div>
+        </div>
+        <div id="extra-custom-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 empty:hidden"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PAGE 8: CONTACT PAGE (الصفحة الأخيرة: معلومات التواصل)
+         ========================================== -->
+    <section id="page-contact" class="portfolio-page hidden space-y-8">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 space-y-8 relative overflow-hidden">
+        <div class="text-center max-w-2xl mx-auto space-y-3">
+          <span class="px-3.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-mono font-bold">
+            FINAL PAGE // GET IN TOUCH
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-white">معلومات التواصل | Contact Info</h2>
+          <p class="text-sm sm:text-base text-emerald-200/85">
+            يسعدني تواصلكم للتعاون في المشاريع السينمائية، الأفلام القصيرة، الوثائقيات، الإعلانات، والبودكاست.
+          </p>
+          <p class="text-xs sm:text-sm font-mono text-emerald-400">
+            محمد حاتم الشهراني • الرقم الجامعي: 2441068 • الشعبة: 11-12
+          </p>
+        </div>
+
+        <!-- 3 Official Contact Cards requested by User -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Phone -->
+          <div class="p-6 rounded-2xl bg-black/80 border border-emerald-600/50 flex flex-col justify-between space-y-5 hover:border-emerald-400 transition-all">
+            <div class="space-y-2">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-2xl">
+                📞
+              </div>
+              <span class="text-xs font-mono text-emerald-400 block pt-1">PHONE NUMBER // رقم الهاتف</span>
+              <h3 class="text-2xl font-mono font-extrabold text-white tracking-wider" dir="ltr">0540237185</h3>
+            </div>
+            <div class="flex gap-2">
+              <a href="tel:0540237185" class="flex-1 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs sm:text-sm text-center transition-all">
+                اتصال مباشر
+              </a>
+              <button type="button" data-copy="0540237185" class="copy-btn px-4 py-2.5 rounded-xl bg-emerald-950 hover:bg-emerald-900 text-emerald-200 border border-emerald-700/60 text-xs sm:text-sm font-semibold transition-all">
+                نسخ الرقم
+              </button>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="p-6 rounded-2xl bg-black/80 border border-emerald-600/50 flex flex-col justify-between space-y-5 hover:border-emerald-400 transition-all">
+            <div class="space-y-2">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-2xl">
+                ✉️
+              </div>
+              <span class="text-xs font-mono text-emerald-400 block pt-1">EMAIL ADDRESS // البريد الإلكتروني</span>
+              <h3 class="text-lg sm:text-xl font-mono font-extrabold text-white break-all" dir="ltr">fentonsounds1@gmail.com</h3>
+            </div>
+            <div class="flex gap-2">
+              <a href="mailto:fentonsounds1@gmail.com" class="flex-1 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs sm:text-sm text-center transition-all">
+                إرسال إيميل
+              </a>
+              <button type="button" data-copy="fentonsounds1@gmail.com" class="copy-btn px-4 py-2.5 rounded-xl bg-emerald-950 hover:bg-emerald-900 text-emerald-200 border border-emerald-700/60 text-xs sm:text-sm font-semibold transition-all">
+                نسخ الإيميل
+              </button>
+            </div>
+          </div>
+
+          <!-- Instagram -->
+          <div class="p-6 rounded-2xl bg-black/80 border border-emerald-600/50 flex flex-col justify-between space-y-5 hover:border-emerald-400 transition-all">
+            <div class="space-y-2">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-2xl">
+                📸
+              </div>
+              <span class="text-xs font-mono text-emerald-400 block pt-1">INSTAGRAM // حساب الإنستقرام</span>
+              <h3 class="text-2xl font-mono font-extrabold text-white" dir="ltr">fenton_sounds</h3>
+            </div>
+            <div class="flex gap-2">
+              <a href="https://instagram.com/fenton_sounds" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs sm:text-sm text-center transition-all">
+                فتح الحساب ↗
+              </a>
+              <button type="button" data-copy="fenton_sounds" class="copy-btn px-4 py-2.5 rounded-xl bg-emerald-950 hover:bg-emerald-900 text-emerald-200 border border-emerald-700/60 text-xs sm:text-sm font-semibold transition-all">
+                نسخ اليوزر
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM SEQUENTIAL PAGE SWITCHER -->
+    <div class="mt-10 glass-card rounded-2xl p-4 flex flex-wrap items-center justify-between gap-4">
+      <button type="button" id="prev-page-btn" class="px-5 py-2.5 rounded-xl bg-emerald-950 hover:bg-emerald-900 text-emerald-200 border border-emerald-700/60 font-bold text-sm transition-all">
+        → الصفحة السابقة
+      </button>
+      <div class="text-center">
+        <span id="current-page-indicator" class="text-xs sm:text-sm font-mono text-emerald-300 font-bold">
+          الصفحة 1 من 8 — السيرة الذاتية
+        </span>
+      </div>
+      <button type="button" id="next-page-btn" class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm transition-all">
+        الصفحة التالية ←
+      </button>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-emerald-900/50 bg-[#030604] py-5 px-4 text-center text-xs text-emerald-400/80">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <span>© محمد حاتم الشهراني (2441068) — الشعبة: 11-12 | جامعة الملك عبدالعزيز</span>
+      <span class="font-mono">Sound Operator &amp; Sound Mixer • @fenton_sounds • 0540237185</span>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL FOR FULL-SCREEN IMAGES -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative max-w-5xl w-full flex flex-col items-center gap-3">
+      <button type="button" id="close-lightbox-btn" class="self-end px-4 py-1.5 rounded-lg bg-emerald-500 text-black font-bold text-sm">
+        إغلاق ✕
+      </button>
+      <img id="lightbox-img" src="assets/raheen_daw.jpg" alt="عرض مكبر" class="max-h-[82vh] max-w-full rounded-2xl border border-emerald-500/50 object-contain" />
+      <p id="lightbox-caption" class="text-sm text-emerald-200 font-semibold text-center"></p>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast-box" class="fixed bottom-5 left-5 z-50 hidden px-4 py-3 rounded-xl bg-emerald-500 text-black font-bold text-sm shadow-xl">
+    تم النسخ بنجاح!
+  </div>
+
+  <script>
+    (function () {
+      const pageOrder = ['bio', 'index', 'raheen', 'sukkar', 'lastnight', 'effat', 'podcasts', 'contact'];
+      const pageNames = {
+        bio: 'الصفحة 1 من 8 — السيرة الذاتية (Bio)',
+        index: 'الصفحة 2 من 8 — فهرس جميع الأعمال (Works Index)',
+        raheen: 'الصفحة 3 من 8 — العمل الأول: فلم رهين',
+        sukkar: 'الصفحة 4 من 8 — العمل الثاني: فلم قصير شوية سكر',
+        lastnight: 'الصفحة 5 من 8 — العمل الثالث: فلم Last Night',
+        effat: 'الصفحة 6 من 8 — العمل الرابع: فلم جامعة عفت & فلم أنا وظلي',
+        podcasts: 'الصفحة 7 من 8 — وثائقي الحجاز والبودكاست وباقي الأعمال',
+        contact: 'الصفحة 8 من 8 — معلومات التواصل (Contact)'
+      };
+      let currentPage = 'bio';
+
+      function pauseAllVideos() {
+        document.querySelectorAll('video').forEach(function (v) {
+          try { v.pause(); } catch (e) {}
+        });
+      }
+
+      function showPage(pageId) {
+        if (!pageOrder.includes(pageId)) return;
+        pauseAllVideos();
+        currentPage = pageId;
+        document.querySelectorAll('.portfolio-page').forEach(function (sec) {
+          sec.classList.add('hidden');
+        });
+        const target = document.getElementById('page-' + pageId);
+        if (target) {
+          target.classList.remove('hidden');
+        }
+        document.querySelectorAll('.nav-pill').forEach(function (btn) {
+          const isMatch = btn.getAttribute('data-nav-page') === pageId;
+          btn.className = isMatch
+            ? 'nav-pill px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-emerald-500 text-black shadow-md'
+            : 'nav-pill px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/70 border border-emerald-800/50';
+        });
+        const indicator = document.getElementById('current-page-indicator');
+        if (indicator) {
+          indicator.textContent = pageNames[pageId] || '';
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Navigation buttons
+      document.querySelectorAll('[data-nav-page]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          showPage(btn.getAttribute('data-nav-page'));
+        });
+      });
+
+      document.querySelectorAll('[data-goto]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          showPage(btn.getAttribute('data-goto'));
+        });
+      });
+
+      const prevBtn = document.getElementById('prev-page-btn');
+      const nextBtn = document.getElementById('next-page-btn');
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          const idx = pageOrder.indexOf(currentPage);
+          const prevIdx = (idx - 1 + pageOrder.length) % pageOrder.length;
+          showPage(pageOrder[prevIdx]);
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          const idx = pageOrder.indexOf(currentPage);
+          const nextIdx = (idx + 1) % pageOrder.length;
+          showPage(pageOrder[nextIdx]);
+        });
+      }
+
+      // Category filtering on Page 2 (Works Index)
+      document.querySelectorAll('.index-filter').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const filter = btn.getAttribute('data-filter');
+          document.querySelectorAll('.index-filter').forEach(function (b) {
+            b.className = (b === btn)
+              ? 'index-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-500 text-black'
+              : 'index-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-950 text-emerald-200 border border-emerald-800/60';
+          });
+          document.querySelectorAll('.index-card').forEach(function (card) {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // Lightbox functionality
+      const modal = document.getElementById('lightbox-modal');
+      const modalImg = document.getElementById('lightbox-img');
+      const modalCap = document.getElementById('lightbox-caption');
+      const closeBtn = document.getElementById('close-lightbox-btn');
+
+      function attachLightbox(imgEl) {
+        imgEl.addEventListener('click', function () {
+          if (!modal || !modalImg) return;
+          modalImg.src = imgEl.src;
+          if (modalCap) modalCap.textContent = imgEl.alt || '';
+          modal.classList.remove('hidden');
+        });
+      }
+      document.querySelectorAll('.lightbox-trigger').forEach(attachLightbox);
+
+      if (closeBtn && modal) {
+        closeBtn.addEventListener('click', function () {
+          modal.classList.add('hidden');
+        });
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) modal.classList.add('hidden');
+        });
+      }
+
+      // Copy buttons on Contact Page
+      const toast = document.getElementById('toast-box');
+      function showToast(msg) {
+        if (!toast) return;
+        toast.textContent = msg;
+        toast.classList.remove('hidden');
+        setTimeout(function () {
+          toast.classList.add('hidden');
+        }, 2500);
+      }
+
+      document.querySelectorAll('.copy-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const text = btn.getAttribute('data-copy') || '';
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function () {
+              showToast('تم النسخ: ' + text);
+            }).catch(function () {
+              fallbackCopy(text);
+            });
+          } else {
+            fallbackCopy(text);
+          }
+        });
+      });
+
+      function fallbackCopy(text) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        showToast('تم النسخ: ' + text);
+      }
+
+      // Custom local media uploader for adding extra images/videos on the fly
+      document.querySelectorAll('.custom-media-input').forEach(function (input) {
+        input.addEventListener('change', function (e) {
+          const galleryId = input.getAttribute('data-target-gallery');
+          const gallery = document.getElementById(galleryId);
+          if (!gallery || !e.target.files) return;
+          Array.from(e.target.files).forEach(function (file) {
+            const url = URL.createObjectURL(file);
+            const card = document.createElement('div');
+            card.className = 'rounded-2xl bg-black/80 border border-emerald-600/60 p-3 space-y-2';
+            if (file.type.startsWith('video/')) {
+              const vid = document.createElement('video');
+              vid.src = url;
+              vid.controls = true;
+              vid.playsInline = true;
+              vid.className = 'w-full rounded-xl max-h-72 object-contain';
+              card.appendChild(vid);
+            } else {
+              const img = document.createElement('img');
+              img.src = url;
+              img.alt = file.name;
+              img.className = 'w-full h-64 object-cover rounded-xl cursor-pointer';
+              attachLightbox(img);
+              card.appendChild(img);
+            }
+            const cap = document.createElement('p');
+            cap.className = 'text-xs text-emerald-300 font-mono truncate';
+            cap.textContent = file.name;
+            card.appendChild(cap);
+            gallery.appendChild(card);
+          });
+          showToast('تمت إضافة الملفات بنجاح!');
+        });
+      });
+
+      // Interactive Studio Waveform & Web Audio Synthesizer on Bio Page
+      const canvas = document.getElementById('wave-canvas');
+      const statusBadge = document.getElementById('audio-status-badge');
+      let audioCtx = null;
+      let pulseBoost = 0;
+
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let phase = 0;
+        function drawWave() {
+          const w = canvas.width;
+          const h = canvas.height;
+          ctx.clearRect(0, 0, w, h);
+          ctx.strokeStyle = 'rgba(16, 185, 129, 0.2)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(0, h / 2);
+          ctx.lineTo(w, h / 2);
+          ctx.stroke();
+
+          ctx.strokeStyle = '#10b981';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          const amp = 12 + pulseBoost * 22;
+          for (let x = 0; x < w; x++) {
+            const y = h / 2 + Math.sin(x * 0.05 + phase) * amp * Math.sin(x * 0.015);
+            if (x === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+          }
+          ctx.stroke();
+          phase += 0.09 + pulseBoost * 0.15;
+          if (pulseBoost > 0.01) pulseBoost *= 0.94;
+          else pulseBoost = 0;
+          requestAnimationFrame(drawWave);
+        }
+        drawWave();
+      }
+
+      document.querySelectorAll('.sound-trigger').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const kind = btn.getAttribute('data-sound');
+          try {
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            if (!audioCtx) audioCtx = new AudioContext();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const now = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            if (kind === 'cinema') {
+              osc.type = 'sawtooth';
+              osc.frequency.setValueAtTime(110, now);
+              osc.frequency.exponentialRampToValueAtTime(45, now + 0.65);
+              gain.gain.setValueAtTime(0.18, now);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + 0.7);
+              osc.start(now);
+              osc.stop(now + 0.7);
+            } else if (kind === 'clean') {
+              osc.type = 'sine';
+              osc.frequency.setValueAtTime(1000, now);
+              gain.gain.setValueAtTime(0.15, now);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+              osc.start(now);
+              osc.stop(now + 0.25);
+            } else if (kind === 'sfx') {
+              osc.type = 'triangle';
+              osc.frequency.setValueAtTime(220, now);
+              osc.frequency.exponentialRampToValueAtTime(880, now + 0.45);
+              gain.gain.setValueAtTime(0.16, now);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+              osc.start(now);
+              osc.stop(now + 0.5);
+            } else {
+              osc.type = 'sine';
+              osc.frequency.setValueAtTime(523.25, now);
+              osc.frequency.setValueAtTime(659.25, now + 0.15);
+              gain.gain.setValueAtTime(0.15, now);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+              osc.start(now);
+              osc.stop(now + 0.5);
+            }
+            pulseBoost = 1.0;
+            if (statusBadge) {
+              statusBadge.textContent = 'PLAYING: ' + kind.toUpperCase();
+              setTimeout(function () {
+                statusBadge.textContent = 'READY';
+              }, 800);
+            }
+          } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
